@@ -6,8 +6,10 @@ public class Hello {
         System.out.println();
 
         weave(horizontal(11, 11));
-    
+        System.out.println();
+
         weave(vertical(11, 11));
+        System.out.println();
 
         weave(diagonal(11, 11));
         System.out.println();
@@ -55,6 +57,7 @@ public class Hello {
                 }
             }
         }
+
             return rug;
    }
 
@@ -70,6 +73,7 @@ public class Hello {
                 }
             }
         }
+
         return rug;
     }
 
@@ -101,9 +105,9 @@ public static String[][] plaid(int width, int height) { // bad
                 }
             }
         }
+
         return rug;
     }
-}
 
 public static String[][] argyle(int width, int height) {
     String[][] rug = new String[width][height];
@@ -117,5 +121,7 @@ public static String[][] argyle(int width, int height) {
             }
         }
     }
-    return rug;
-}
+        return rug;
+    }
+}   
+
