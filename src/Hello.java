@@ -3,7 +3,7 @@ public class Hello {
     public static void main(String[] args) {
 
         weave(solid(11, 11));
-        System.out.println();
+        System.out.println(); // spaces out each rug so babushka can have multiple rugs
 
         weave(horizontal(11, 11));
         System.out.println();
