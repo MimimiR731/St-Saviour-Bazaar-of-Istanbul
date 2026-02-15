@@ -22,13 +22,13 @@ public class Hello {
     }
 
     public static void weave(String[][] rug) {
-        // Method to print 2D emoji arrays.
-        for(int i = 0; i < rug.length; i++) {
-            for(int j = 0; j < rug[i].length; j++) {
+        // Method prints 2D emoji arrays
+        for(int i = 0; i < rug.length; i++) { // row
+            for(int j = 0; j < rug[i].length; j++) { // column
                 System.out.print(rug[i][j]);
             }
            
-            System.out.println("");
+            System.out.println(""); // starts the new line after each row
         }
     }
 
@@ -50,9 +50,9 @@ public class Hello {
         String[][] rug = new String[width][height];
         for(int i = 0; i < rug.length; i++) {
             for(int j = 0; j < rug[i].length; j++) {
-                if(i % 2 == 0) {
+                if(i % 2 == 0) { // if the row number is even print 🌜
                     rug[i][j] = "🌜";
-                }  else {
+                }  else { // if the row number is odd print 🌛
                     rug[i][j] = "🌛";
                 }
             }
@@ -65,7 +65,7 @@ public class Hello {
         String[][] rug = new String[width][height];
 
         for (int i = 0; i < rug.length; i++) {
-            for (int j = 0; j < rug[i].length; j++) {
+            for (int j = 0; j < rug[i].length; j++) { // opposite of horizontal
                 if (j % 2 == 0) {
                     rug[i][j] = "🙉";
                 } else {
@@ -82,7 +82,7 @@ public static String[][] diagonal(int width, int height) {
 
         for (int i = 0; i < rug.length; i++) {
             for (int j = 0; j < rug[i].length; j++) {
-                if (i == j) {
+                if (i == j) { // when the row number and column number are equal print 🌜
                     rug[i][j] = "🌜";
                 } else {
                     rug[i][j] = "🌛";
@@ -93,12 +93,12 @@ public static String[][] diagonal(int width, int height) {
         return rug;
     }
 
-public static String[][] plaid(int width, int height) { // bad
+public static String[][] plaid(int width, int height) { 
         String[][] rug = new String[width][height];
 
         for (int i = 0; i < rug.length; i++) {
             for (int j = 0; j < rug[i].length; j++) {
-                if (i % 3 == 0 || j % 3 == 0) {
+                if (i % 3 == 0 || j % 3 == 0) { // if the row/column number are a multiple of 3 print 🙉
                     rug[i][j] = "🙉";
                 } else {
                     rug[i][j] = "🙈";
@@ -114,7 +114,7 @@ public static String[][] argyle(int width, int height) {
 
      for (int i = 0; i < width; i++) {
         for (int j = 0; j < height; j++) {
-            if ((i % 4 == j % 4) || ((i + j) % 4 == 0)) {
+            if ((i % 4 == j % 4) || ((i + j) % 4 == 0)) { // forms diamond shapes 
                 rug[i][j] = "🌜";
             } else {
                 rug[i][j] = "🌛";
